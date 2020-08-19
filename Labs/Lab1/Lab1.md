@@ -76,13 +76,8 @@ If they don't contain code that will read in your preferred format, there may be
 
 ## Your Turn: Loading a Dataset
 
-You can choose between a publicly available health dataset or you can use your own data if you have any! Here are some example publicly available datasets, that you can download if you want (use the Export > CSV button near the top right part of the page). If you load these, you'll need to use `read_csv()` from Tidyverse rather than the built-in `read.csv()` because `read.csv()` from **base R can only read files less than 5 MB in size.**
-
-* [Inpatient Prospective Payment System (IPPS) Provider Summary for the Top 100 Diagnosis-Related Groups (DRG) - FY2011, 26.8 MB filesize](https://data.cms.gov/Medicare-Inpatient/Inpatient-Prospective-Payment-System-IPPS-Provider/97k6-zzx3)
-* [U.S. Chronic Disease Indicators (CDI), 159.2 MB filesize](https://chronicdata.cdc.gov/Chronic-Disease-Indicators/U-S-Chronic-Disease-Indicators-CDI-/g4ie-h725)
-
 Start a new R script file to save your work (showing each of the following steps)
-Load your preferred dataset into R. Print (show) the first 5 rows and 5 columns. If your dataset was loaded and assigned properly, you will be able to do this by using the square brackets, `[]`, to show a subset of the dataset. If your data was assigned to the name `my_data_set`, you would enter `my_data_set[1:5,1:5]` to display rows 1-5 and columns 1-5. Submit your work as an R script (somefilename.R) that demonstrates all of the requested actions (i.e. if we were to run your script, it should load data into R and then display the first 5 rows and 5 columns).
+Load the file `sequence_metadata.xlsx` into R. Print (show) the first 5 rows and 5 columns. If your dataset was loaded and assigned properly, you will be able to do this by using the square brackets, `[]`, to show a subset of the dataset. If your data was assigned to the name `my_data_set`, you would enter `my_data_set[1:5,1:5]` to display rows 1-5 and columns 1-5. Submit your work as an R script (somefilename.R) that demonstrates all of the requested actions (i.e. if we were to run your script, it should load data into R and then display the first 5 rows and 5 columns).
 
 ## The report
 
