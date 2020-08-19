@@ -2,35 +2,45 @@
 
 ## Background
 
-In this lab, we will combine the bioinformatics training from this week with last week's genomic skills to identify and estimate the evolutionary history of an unknown human DNA sequence associated with disease.
+In this lab, we will combine the bioinformatics training from this week with last week's genomic skills to identify and estimate the evolutionary history of sequence data associated with disease.
 
 
 ### Mystery Sequence
 
 ```
-CCTCACCCTGTGGAGCCACACCCTAGGGTTGGCCAATCTACTCCCAGGAGCAGGGAGGGCAGGAGCCAGG
-GCTGGGCATGAAAGTCAGGGCAGAGCCATCTATTGCTTACATTTGCTTCTGACACAACTGTGTTCACTAG
-CAACCTCAAACAGACACCATGGTGCACCTGACTCCTGTGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCA
-AGGTGAACGTGGATGAAGTTGGTGGTGAGGCCCTGGGCAGGTTGGTATCAAGGTTACAAGACAGGTTTAA
-GGAGACCAATAGAAACTGGGCATGTGGAGACAGAGAAGACTCTTGGGTTTCTGATAGGCACTGACTCTCT
-CTGCCTATTGGTCTATTTTCCCACCCTTAGGCTGCTGGTGGTCTACCCTTGGACCCAGAGGTTCTTTGAG
-TCCTTTGGGGATCTGTCCACTCCTGATGCTGTTATGGGCAACCCTAAGGTGAAGGCTCATGGCAAGAAAG
-TGCTCGGTGCCTTTAGTGATGGCCTGGCTCACCTGGACAACCTCAAGGGCACCTTTGCCACACTGAGTGA
-GCTGCACTGTGACAAGCTGCACGTGGATCCTGAGAACTTCAGGGTGAGTCTATGGGACCCTTGATGTTTT
-CTTTCCCCTTCTTTTCTATGGTTAAGTTCATGTCATAGGAAGGGG
+MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFR
+SSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIR
+GWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVY
+SSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQ
+GFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFL
+LKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITN
+LCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCF
+TNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYN
+YLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPY
+RVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFG
+RDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAI
+HADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPR
+RARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTM
+YICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFG
+GFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFN
+GLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQN
+VLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGA
+ISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMS
+ECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAH
+FPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELD
+SFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELG
+KYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSE
+PVLKGVKLHYT
 ```
 
 ## Instructions
 
 1. What is the above sequence? What gene is it from? Who published the paper that the sequence is from?
-2. Identify the mutations in the gene that are associated with disease. There are multiple different methods to the right answer here.
-3. Which disease(s) would be associated with the above DNA sequence? Describe the details of the disease(s): What are the symptoms of the disease? What are the biological mechanisms? Is there treatment available for the disease?
-4. Using your knowledge from class and internet resources, describe (in your own words, no copy-pasting!) an alignment technique.
-5. Using skills from class, find at least 10 other variants of the gene above and download them. Describe how you found these other variants.
-6. Using the variants that you downloaded as well as the sequence provided above, align all of the sequences. Describe the method by which you aligned the sequences.
-7. Estimate the evolutionary history of the gene by building a phylogeny with the multiple-sequence alignment resulting from step 6. Describe the method by which you built a phylogeny.
+2. In. one sentence, why is this particular gene of interest to medical and public health practice?
+3. Using your knowledge from class and internet resources, describe (in your own words, no copy-pasting!) an alignment technique.
+4. Download the file `all_sequences.fasta`. Align all of the sequences. Describe the method by which you aligned the sequences.
+5. Estimate the evolutionary history of these sequences by building a phylogeny with the multiple-sequence alignment resulting from step 4. Describe the method by which you built a phylogeny.
 8. View your phylogeny and interpret the results. Did the results fit your expectations? What implications, if any, follow, given your estimated evolutionary history? Attach a copy of  your phylogeny to the report.
-
 
 ## The report
 
