@@ -36,7 +36,7 @@ PVLKGVKLHYT
 ## Instructions
 
 1. What is the above sequence? What gene is it from? Who published the paper that the sequence is from?
-2. In. one sentence, why is this particular gene of interest to medical and public health practice?
+2. In one sentence, why is this particular gene of interest to medical and public health practice?
 3. Using your knowledge from class and internet resources, describe (in your own words, no copy-pasting!) an alignment technique.
 4. Download the file `all_sequences.fasta` from the Data folder. Align all of the sequences. Describe the method by which you aligned the sequences.
 5. Estimate the evolutionary history of these sequences by building a phylogeny with the multiple-sequence alignment resulting from step 4. Describe the method by which you built a phylogeny.
