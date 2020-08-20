@@ -1,4 +1,4 @@
-# Problem Set 5: Predictive Models - see email from Prof. Crandall for Modified Problem Set 5 and due date
+# Problem Set 5: Predictive Models 
 
 ## Instructions
 Load the “covid19_outcomes_data.csv" file (available in the ProblemSet5/PS5 folder on GitHub).  This is a cleaned up version of the data from [the Open COVID-19 Data Working Group](https://github.com/beoutbreakprepared/nCoV2019).
