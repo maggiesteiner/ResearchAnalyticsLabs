@@ -1,9 +1,17 @@
 # Problem Set 5: Predictive Models - see email from Prof. Crandall for Modified Problem Set 5 and due date
 
 ## Instructions
-Load the “Session10PimaDiabetesCleanRand.csv” file [(available in the ProblemSet5/PS5 folder on GitHub)](https://github.com/gwcbi/ResearchAnalyticsLabs/raw/master/ProblemSets/PS5/Session10PimaDiabetesCleanRand.csv).  This is a cleaned up version of the data from session 5 with 725 individuals, 7 independent/predictor variables and Diabetes is a binary response variable (1=diabetes, 0=no diabetes).
+Load the “covid19_outcomes_data.csv" file [(available in the ProblemSet5/PS5 folder on GitHub)](https://github.com/gwcbi/ResearchAnalyticsLabs/raw/master/ProblemSets/PS5/covid19_outcomes_data.csv").  This is a cleaned up version of the data from [this source](https://github.com/beoutbreakprepared/nCoV2019).
 
-Make the first two thirds of the samples (samples 1 to 483) into a training set and the last third into a test dataset (samples 484 to 725). For simplicity, do not worry about scaling the independent variables. Use two different predictive modeling methods to create a classifier with the training data and then determine how well they do in predicting diabetes in the test data set.
+After loading the CSV file, remove the 6th column and conver the "age" variable to a numeric variable. Then, use the `createDataPartition()` function of the `caret` package to split the data into training and test sets, as shown below:
+```r
+library(caret)
+train_idx<-createDataPartition(data$country,times=1,p=0.8) 
+data_train<-data[train_idx$Resample1,]
+data_test<-data[-train_idx$Resample1,]
+```
+
+For simplicity, do not worry about scaling the independent variables. Use two different predictive modeling methods to create a classifier with the training data and then determine how well they do in predicting diabetes in the test data set.
 
 1. Use logistic regression + stepwise variable selection (`stepAIC` function in the MASS package) to **find the "best” model**.
 
@@ -27,7 +35,7 @@ For the each method/model fit, **report the training data area under the curve (
 
 #### Data Source
 
-Smith, J. W., Everhart, J. E., Dickson, W. C., Knowler, W. C. and Johannes, R. S. (1988) Using the ADAP learning algorithm to forecast the onset of diabetes mellitus. In Proceedings of the Symposium on Computer Applications in Medical Care (Washington, 1988), ed. R. A. Greenes, pp. 261–265. Los Alamitos, CA: IEEE Computer Society Press.
+Xu B, Kraemer MUG, Open COVID-19 Data Working Group. Open access epidemiological data from the COVID-19 outbreak. Lancet Infect Dis. 20(5):534 (2020).
 
 ## The report
 
