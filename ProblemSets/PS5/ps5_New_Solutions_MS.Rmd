@@ -1,0 +1,97 @@
+---
+title: "Problem Set 5 - Predictive Models"
+output: pdf_document
+---
+
+### Load packages and prepare data
+
+```{r}
+# load packages
+library(MASS)
+library(pROC)
+library(caret)
+library(rpart)
+library(rpart.plot)
+
+# set seed
+set.seed(5678)
+
+# load and clean data
+data<-read.csv("~/Desktop/Research/GW\ CBI/covid19_outcomes_data.csv")
+data<-data[,-6]
+data$age<-as.numeric(data$age)
+
+# view first few rows of data
+head(data)
+
+# subset data to training and test sets
+#split so all countries are in the training set (NOTE: not an even 80/20 due to some countries only having one data point)
+train_idx<-createDataPartition(data$country,times=1,p=0.8) 
+data_train<-data[train_idx$Resample1,]
+data_test<-data[-train_idx$Resample1,]
+```
+
+### Method 1: Logistic regression & stepwise variable selection
+
+Logistic regression:
+```{r}
+log_model<-glm(died_binary ~ .,data=data_train,family=binomial)
+summary(log_model)
+```
+Stepwise variable selection:
+```{r}
+log_model_step<-stepAIC(log_model,direction="both")
+summary(log_model_step)
+```
+Prediction on training data:
+```{r}
+log_pred<-predict(log_model_step,type="response")
+train_roc<-roc(died_binary ~ log_pred,data=data_train)
+plot(train_roc)
+auc(train_roc)
+```
+Prediction on test data:
+```{r}
+log_test<-predict(log_model_step,newdata=data_test,type="response")
+test_roc<-roc(died_binary ~ log_test,data=data_test)
+plot(test_roc)
+auc(test_roc)
+```
+
+### Method 2: Decision tree
+
+Decision tree on training data:
+```{r}
+tree<-rpart(died_binary ~.,data=data_train,method="class")
+prp(tree)
+text(tree)
+printcp(tree)
+```
+
+Prune tree (no change):
+```{r}
+cp_use<-tree$cptable[which.min(tree$cptable[,"xerror"]),"CP"]
+pruned_tree<-prune(tree,cp=cp_use)
+prp(pruned_tree)
+text(pruned_tree)
+post(pruned_tree,title="Pruned Tree")
+```
+Prediction on training data:
+```{r}
+tree_pred<-predict(pruned_tree,data_train,type="prob")
+train_roc_tree<-roc(died_binary ~ tree_pred[,2],data=data_train)
+plot(train_roc)
+auc(train_roc)
+```
+Prediction on test data:
+```{r}
+tree_test<-predict(pruned_tree,newdata=data_test,type="prob")
+test_roc_tree<-roc(died_binary ~ tree_test[,2],data=data_test)
+plot(test_roc_tree)
+auc(test_roc_tree)
+```
+
+Most important variables:
+```{r}
+pruned_tree$variable.importance
+```
