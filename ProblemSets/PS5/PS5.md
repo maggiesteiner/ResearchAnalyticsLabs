@@ -1,7 +1,7 @@
 # Problem Set 5: Predictive Models 
 
 ## Instructions
-Load the “covid19_outcomes_data.csv" file (available in the ProblemSet5/PS5 folder on GitHub).  This is a cleaned up version of the data from [the Open COVID-19 Data Working Group](https://github.com/beoutbreakprepared/nCoV2019).
+Load the `covid19_outcomes_data.csv` file (available in the ProblemSet5/PS5 folder on GitHub).  This is a cleaned up version of the data from [the Open COVID-19 Data Working Group](https://github.com/beoutbreakprepared/nCoV2019).
 
 After loading the CSV file, remove the 6th column and convert the "age" variable to a numeric variable. Then, use the `createDataPartition()` function of the `caret` package to split the data into training and test sets, as shown below:
 ```r
