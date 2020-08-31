@@ -1,4 +1,19 @@
 # ResearchAnalyticsLabs
+******
+*** Notes - New Assignments ***
+
+**Problem Sets 1, 3, 4, and 5:** Updated with COVID-19 datasets.
+
+**Problem Set 2:** This assignment should be done with continuous variables, so neither COVID-19 data set used so far is suitable. I have not yet found a COVID dataset that I think would work well.
+
+**Labs 1 & 4:** Updated with COVID-19 datasets.
+
+**Labs 2 & 3:** These labs currently have students find their own datasets, so I have kept them as-is for now.
+
+**Lab 5:** Data needed is a categorical target & continuous predictors. The COVID-19 epidemiological dataset does not have enough continuous predictors to be used for this. A different dataset (that could also be used for Problem Set 2) would be necessary.
+
+******
+
 Welcome to the course! Here on GitHub you will find all the assignments (Labs, Problelm Sets, and Final Project) for the course as well as any data and/or links to software/data to be successful in the assignments. There are instructions for each assignment for each week. All assignments are due on Thursday of the week of assignment, except for the firs Problem Set, which will be due the second Thursday along with Lab 1 and the Final Project which is due on Day 2 of Exam Week. These dates are also listed below. You will get the most out of the homework and the course if you work on the problem sets/labs/final project BEFORE the live session each week and bring your questions to the live session. Good luck with the course and have fun with Research Analytics!
 
 Sincerely,
