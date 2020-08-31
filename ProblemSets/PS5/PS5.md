@@ -1,14 +1,11 @@
 # Problem Set 5: Predictive Models 
 
 ## Instructions
-Load the `covid19_outcomes_data.csv` file (available in the ProblemSet5/PS5 folder on GitHub).  This is a cleaned up version of the data from [the Open COVID-19 Data Working Group](https://github.com/beoutbreakprepared/nCoV2019).
+Load the [`covid19_outcomes_data.csv`](https://github.com/maggiesteiner/ResearchAnalyticsLabs/blob/master/ProblemSets/PS5/covid19_outcomes_data.csv) file (available in the ProblemSet5/PS5 folder on GitHub).  This is a cleaned up version of the data from [the Open COVID-19 Data Working Group](https://github.com/beoutbreakprepared/nCoV2019).
 
-After loading the CSV file, remove the 6th column and convert the "age" variable to a numeric variable. Then, use the `createDataPartition()` function of the `caret` package to split the data into training and test sets, as shown below:
+First, set the seed to 1389 (`set.seed(1389`). After loading the CSV file, remove the 6th column and convert the "age" variable to a numeric variable. Then, split the data into training and test sets, with the first 2/3 used for training and the last 2/3 used for testing, as shown below:
 ```r
-library(caret)
-train_idx<-createDataPartition(data$country,times=1,p=0.8) 
-data_train<-data[train_idx$Resample1,]
-data_test<-data[-train_idx$Resample1,]
+
 ```
 
 For simplicity, do not worry about scaling the independent variables. Use two different predictive modeling methods to create a classifier with the training data and then determine how well they do in predicting diabetes in the test data set.
