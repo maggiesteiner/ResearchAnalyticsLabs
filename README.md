@@ -6,6 +6,8 @@
 
 **Problem Set 2:** This assignment should be done with continuous variables, so neither COVID-19 data set used so far is suitable. I have not yet found a COVID dataset that I think would work well.
 
+**Note on Problem Set 5:** Currently, createDataPartition() from the caret package is used to separate data. It would be easier for students to subset by row numbers, but this can cause issues since some categorical variables with low frequency (particularly country) may not appear in both sets (the caret function accounts for this). This assignment may be better suited for a dataset with continuous predictors, such as the one used before, similar to PS2/Lab 5.
+
 **Labs 1 & 4:** Updated with COVID-19 datasets.
 
 **Labs 2 & 3:** These labs currently have students find their own datasets, so I have kept them as-is for now.
